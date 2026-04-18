@@ -1,0 +1,10 @@
+flowchart
+    A[Raw CSV / ODS files] --> B[Jupyter Notebook<br/>Python + Pandas]
+    B --> C[(MongoDB in Docker)]
+    C --> D[Cleaned collections]
+    D --> E[Austria master dataset]
+    D --> F[MongoDB MapReduce]
+    E --> G[Analysis & modeling<br/>Matplotlib / Seaborn / Statsmodels]
+    F --> G
+    G --> H[Charts, insights, conclusion]
+

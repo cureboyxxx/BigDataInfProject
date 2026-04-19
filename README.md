@@ -74,7 +74,7 @@ The notebook was tested in this environment:
 
 ## Repository Structure
 
-- `00_FINAL_BigDataInfNotebook.ipynb` — main notebook
+- `austrias-baby-deficit.ipynb` — main notebook
 - `docker-compose.yml` — MongoDB in docker container
 - `requirements.txt` — Python dependencies used for the notebook
 - `raw_data/` — input files used by the notebook (CSV/ODS)
@@ -90,23 +90,19 @@ The notebook was tested in this environment:
 
 ## Data Sources
 
-Primary sources are official datasets from Statistik Austria:
+All sources are official datasets from Statistik Austria:
 
 1) Crude birth rate (Rohe Geburtenrate)
-- Dataset: OGD_indquot001_HVD_INDQUOTE_6
 - https://data.statistik.gv.at/web/meta.jsp?dataset=OGD_indquot001_HVD_INDQUOTE_6
 
 2) Total fertility rate (Gesamtfertilitätsrate)
-- Dataset: OGD_indquot001_HVD_INDQUOTE_3
 - https://data.statistik.gv.at/web/meta.jsp?dataset=OGD_indquot001_HVD_INDQUOTE_3
 
 3) Housing Price Index (Häuserpreisindex)
 - https://www.statistik.at/statistiken/volkswirtschaft-und-oeffentliche-finanzen/preise-und-preisindizes/haeuserpreisindex-und-ooh-pi
-- https://www.statistik.at/fileadmin/pages/221/HPIMesszahlen.ods
 
 4) Gross Regional Product (Bruttoregionalprodukt)
 - https://www.statistik.at/en/statistics/national-economy-and-public-finance/national-accounts/regional-accounts
-- https://www.statistik.at/fileadmin/pages/226/Gross_Regional_Product_NUTS3.ods
 
 5) Employment rates (Erwerbstätigkeitsquote)
 - https://www.statistik.at/statistiken/bevoelkerung-und-soziales/gender-statistiken/erwerbstaetigkeit
@@ -123,15 +119,15 @@ The downloaded files used by the notebook are in `raw_data/`.
 
 The notebook follows this pipeline:
 
-1. **Start MongoDB via Docker**
-2. **Ingest raw CSV and ODS files into MongoDB**
-3. **Inspect raw collections**
-4. **Clean and standardize each dataset**
-5. **Store cleaned datasets in new MongoDB collections**
-6. **Build a national master dataset**
-7. **Run regional and national analyses**
-8. **Visualize relationships**
-9. **Run a forward-selection multivariate regression**
+1. Start MongoDB via Docker
+2. Ingest raw CSV and ODS files into MongoDB
+3. Inspect raw collections
+4. Clean and standardize each dataset
+5. Store cleaned datasets in new MongoDB collections
+6. Build a national master dataset
+7. Run regional and national analyses
+8. Visualize relationships
+9. Run a forward-selection multivariate regression
 
 
 

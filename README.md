@@ -10,7 +10,7 @@ Team: Elias Grünbacher, Peter Kovacs, Mario Lagger
 
 ## Project overview
 
-The project uses a **Jupyter notebook + MongoDB + Docker** workflow to ingest raw public datasets, clean and harmonize them, store them in MongoDB, and analyze the relationship between economic pressure and fertility trends across Austria.
+The project uses a Jupyter notebook + MongoDB + Docker workflow to ingest raw public datasets, clean and harmonize them, store them in MongoDB, and analyze the relationship between economic pressure and fertility trends across Austria.
 
 
 Austria, like many developed economies, has seen a sustained decline in fertility and birth rates. This project investigates whether this decline is associated with:
@@ -20,7 +20,7 @@ Austria, like many developed economies, has seen a sustained decline in fertilit
 - **Employment dynamics**
 - **Unemployment and economic uncertainty**
 
-Using official datasets from **Statistik Austria**, the notebook combines demographic and macroeconomic indicators and evaluates them through:
+Using official datasets from Statistik Austria, the notebook combines demographic and macroeconomic indicators and evaluates them through:
 
 - data ingestion into MongoDB
 - cleaning and harmonization with pandas

@@ -1,5 +1,6 @@
 # Austria’s Baby Deficit: How Housing Costs and Economic Pressure Are Keeping Birth Rates Low 
 ### An analysis of Austria's demographic and macroeconomic development over the last two decades
+The project uses a Jupyter notebook + MongoDB + Docker workflow to ingest raw public datasets, clean and harmonize them, store them in MongoDB, and analyze the relationship between economic pressure and fertility trends across Austria.
 
 ---
 Course: “Big Data Infrastructure”
@@ -8,37 +9,13 @@ Team: Elias Grünbacher, Peter Kovacs, Mario Lagger
 
 ---
 
-## Project overview
-
-The project uses a Jupyter notebook + MongoDB + Docker workflow to ingest raw public datasets, clean and harmonize them, store them in MongoDB, and analyze the relationship between economic pressure and fertility trends across Austria.
-
-
-Austria, like many developed economies, has seen a sustained decline in fertility and birth rates. This project investigates whether this decline is associated with:
-
-- **Housing costs**
-- **Macroeconomic performance**
-- **Employment dynamics**
-- **Unemployment and economic uncertainty**
-
-Using official datasets from Statistik Austria, the notebook combines demographic and macroeconomic indicators and evaluates them through:
-
-- data ingestion into MongoDB
-- cleaning and harmonization with pandas
-- regional and national exploratory analysis
-- correlation analysis
-- a MapReduce calculation
-- a multivariate forward-selection regression model
-
-
 
 ## Main research question
 
 **To what extent are falling fertility rates in Austria associated with rising housing costs and broader economic pressure?**
 
 
-
 ## Key findings
-
 The notebook’s analysis points to several clear results:
 
 * **Clear regional gap:** Western Austria has the highest average fertility, while eastern and southern regions are lower. The west–east divide is consistent across the data.
@@ -51,26 +28,18 @@ The notebook’s analysis points to several clear results:
 * **Best multivariate result:** The strongest combined model uses unemployment rate + GRP, with a multiple correlation of 0.727 and adjusted R² of 0.443. In other words, these two variables together explain about 44% of fertility variation in the model.
 
 
-## Tech stack
-
-- Python
-- Jupyter Notebook
-- MongoDB
-- Docker / Docker Compose
-- pandas
-- NumPy
-- matplotlib
-- seaborn
-- statsmodels
-- PyMongo
-
-The notebook was tested in this environment:
+## Components & Versions
 
 - Python 3.14.2
-    - Python package versions are listed in "requirements.txt"
-- MongoDB 8.2.7
+    - pandas 3.0.2
+    - NumPy 2.4.4
+    - matplotlib 3.10.8
+    - seaborn 0.13.2
+    - statsmodels 0.14.6
+    - PyMongo 4.16.0
+- Jupyter Notebook 7.5.5
 - Docker Desktop 4.69.0
-
+- MongoDB 8.2.7
 
 ## Repository Structure
 
@@ -79,13 +48,6 @@ The notebook was tested in this environment:
 - `requirements.txt` — Python dependencies used for the notebook
 - `raw_data/` — input files used by the notebook (CSV/ODS)
 - `pictures/` — images used in the notebook
-- `architecture-diagram.mermaid` — architecture diagram
-
-
-## Architecture
-
-<img src="pictures/architecture_diagram.png" width="300px">
-
 
 
 ## Data Sources
@@ -113,12 +75,7 @@ All sources are official datasets from Statistik Austria:
 The downloaded files used by the notebook are in `raw_data/`.
 
 
-
-
 ## Workflow
-
-The notebook follows this pipeline:
-
 1. Start MongoDB via Docker
 2. Ingest raw CSV and ODS files into MongoDB
 3. Inspect raw collections
@@ -128,7 +85,6 @@ The notebook follows this pipeline:
 7. Run regional and national analyses
 8. Visualize relationships
 9. Run a forward-selection multivariate regression
-
 
 
 ## Quickstart
